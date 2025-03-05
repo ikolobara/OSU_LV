@@ -1,14 +1,17 @@
 def task4():
-    dict = {}
+    word_count_dict = {}
     with open("song.txt") as f:
         for line in f:
-            for word in line.lower().strip().split(' '):
-                if word in dict.keys():
-                    dict[word] = dict.get(word) + 1
+            for word in line.lower().strip().replace(',', '').split(' '):
+                if word in word_count_dict.keys():
+                    word_count_dict[word] = word_count_dict.get(word) + 1
                 else:
-                    dict[word] = 1
+                    word_count_dict[word] = 1
 
-    for k,v in dict.items():
-        if v == 1:
-            print(k)
-            
+    count = 0
+    for key,value in word_count_dict.items():
+        if value == 1:
+            count += 1
+            print(key)
+        
+    print(count)

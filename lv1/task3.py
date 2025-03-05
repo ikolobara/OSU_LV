@@ -9,7 +9,6 @@ def task3():
             numbers.append(int(user_input))
         except:
             print("Niste unijeli broj.")
-    
     print(len(numbers))
     print(sum(numbers) / len(numbers))
     print(min(numbers))
