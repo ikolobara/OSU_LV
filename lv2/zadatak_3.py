@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def task3_a(img):
-    img = img[:,:,0].copy()
-    img += 10
-    show_image(np.clip(img, 0, 255))
+    plt.figure()
+    plt.imshow(img, cmap='gray', alpha=0.8)
+    plt.show()
     
 
 def task3_b(img):
